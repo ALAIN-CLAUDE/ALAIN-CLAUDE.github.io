@@ -46,7 +46,7 @@
 								<p>
                   <h2>Use Case </h2>
                   
-									<b style="color:red">Creating a component like this with all required fields can save alot of time your Sales Reps or users spend clicking to create single or individual accounts at a time </b>
+									<b class="color">Creating a component like this with all required fields can save alot of time your Sales Reps or users spend clicking to create single or individual accounts at a time </b>
 								</p>
               </header> 
               <section>
@@ -59,199 +59,185 @@
 								<header>
 									<h3>multipleContactCreation.html</h3>
 								</header>
+              
 								<p>
-									Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet
-									at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-									feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-									fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus
-									egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
-								</p>
-								<p>
-									Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient
-									orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur
-									ut penatibus fermentum nibh erat malesuada varius.
+                  Press ctr,shift,p in your VSC (windows command) and create a lwc.<br>
+                  Name it and  Select the html
+                  file.
+                 <br>
+                  using lightning design system (<a href="https://developer.salesforce.com/docs/component-library/bundle/lightning-icon/example" class="color">Link :</a> )you can select the icons you like.
+                  Now we need to do the following
+                  <ol>
+                    <li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">Render a list of elements </a></li>
+                    <li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">A flexible grid system ( lightning-layout ) :</a><br>
+                     
+                      A lightning-layout is a flexible grid system for arranging containers within a page or inside another container. </li>
+                   
+                    <li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">lightning-record-edit-form :</a> <br>We use for:each to iterate through our list of elements and store them in item variable which we can now use to map our fields</li>
+                    <li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color"> Layout Item</a></li>
+                    <li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">lightning-input-field</a></li>
+                   
+                  </ol>
+                  <br>
+                  <script src="https://gist.github.com/ALAIN-CLAUDE/7dd122bdf144754ac5679c139668928d.js"></script>
+                      
 								</p>
 							</section>
 							<section>
 								<header>
-									<h3>Augue euismod feugiat tempus</h3>
+									<h3>multipleContactCreation.js</h3>
 								</header>
 								<p>
-									Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-									feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-									ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante
-									egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
+                    We need to define the functions for the buttons we created above
+                <ol>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset#:~:text=reset()%20method%20restores%20a,the%20input%2C%20such%20as%20disabled%20." class="color">Reset :</a>
+                    handleReset().this function querys for all input fields and resets all to blank if user made a mistake and dont want to cancel each at a time.</li>
+                 <li><a href="https://www.w3schools.com/jsref/met_form_submit.asp" class="color">Submit :</a>
+                  handleSubmit() this function querys for all input fields and resets all to blank if user made a mistake and dont want to cancel each at a time.</li>
+                  <li>
+                    addRow() uses concat to add row elements</li>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity" class="color">reportValidity :</a>
+                    reportValidity() method returns true if the element's child controls satisfy their validation constraints. When false is returned, cancelable invalid events are fired for each invalid child and validation problems are reported to the user.</li>
+                </ol>
+
+
+                  <br>
+                  <script src="https://gist.github.com/ALAIN-CLAUDE/064cf93d872376e72c77c9d2dd599d74.js"></script>
+								</p>
+              </section>
+              
+              <section>
+								<header>
+									<h3>multipleContactCreation.js-meta.xml</h3>
+								</header>
+								<p>
+                  Important for our component .<br>
+                  "apiVersion" represent the current api version we using.<br>
+                  set isExposed to true . if left as false you will not see the data<br>
+                  Now our targets are imporant since we use this to determine where we wanna see our component( AppPage,RecordPage,HomePage) . you can put all depending on your use of this component
+              
+                  <br>
+                  <script src="https://gist.github.com/ALAIN-CLAUDE/42fa2684f859e8b97b39363f6952aa37.js"></script>
 								</p>
 							</section>
 						</article>
-						<hr />
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Gravida aliquam penatibus</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Magna laoreet et aliquam</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-						</div>
+					
+					
 					</div>
 
-				</div>
+        </div>
+        
+        <section class="carousel">
+					<div class="reel">
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Pulvinar sagittis congue</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Fermentum sagittis proin</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Varius magnis sollicitudin</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Pulvinar sagittis congue</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Fermentum sagittis proin</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#">Varius magnis sollicitudin</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+					</div>
+				</section>
+
+
 
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">
-						<div class="row">
-
-							<!-- Tweets -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon brands fa-twitter circled"><span class="label">Tweets</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="tweet">
-												Amet nullam fringilla nibh nulla convallis tique ante sociis accumsan.
-												<span class="timestamp">5 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Hendrerit rutrum quisque.
-												<span class="timestamp">30 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Curabitur donec nulla massa laoreet nibh. Lorem praesent montes.
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Lacus natoque cras rhoncus curae dignissim ultricies. Convallis orci aliquet.
-												<span class="timestamp">5 hours ago</span>
-											</article>
-										</li>
-									</ul>
-								</section>
-
-							<!-- Posts -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-file circled"><span class="label">Posts</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Nisl fermentum integer</a></h3>
-												</header>
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Phasellus portitor lorem</a></h3>
-												</header>
-												<span class="timestamp">6 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Magna tempus consequat</a></h3>
-												</header>
-												<span class="timestamp">Yesterday</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Feugiat lorem ipsum</a></h3>
-												</header>
-												<span class="timestamp">2 days ago</span>
-											</article>
-										</li>
-									</ul>
-								</section>
-
-							<!-- Photos -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-camera circled"><span class="label">Photos</span></h2>
-									</header>
-									<div class="row gtr-25">
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic15.jpg" alt="" /></a>
-										</div>
-									</div>
-								</section>
-
-						</div>
-						<hr />
+					
+					
 						<div class="row">
 							<div class="col-12">
-
 								<!-- Contact -->
 									<section class="contact">
 										<header>
-											<h3>Nisl turpis nascetur interdum?</h3>
+											<h3>Find me on ...</h3>
 										</header>
-										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
+									
 										<ul class="icons">
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+											<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+											<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
 										</ul>
 									</section>
 
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											<li>&copy; 2015-2020. All rights reserved.</li><li>Design:Alain-Claude </li>
 										</ul>
 									</div>
 
@@ -262,6 +248,8 @@
 				</div>
 
 		</div>
+	
+	
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
