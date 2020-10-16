@@ -26,9 +26,9 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               
-              <li><a href="left-sidebar.html">Portfolio</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
            
-              <li><a href="#conts">Contact</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
 
@@ -124,9 +124,21 @@
                   </header>
 									<section>
                     
-                
+										<ol>
 										<p>
-                    Apex Class 
+									<h3>Apex Class </h3>  
+									<br>
+								
+										<li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">Create an apex class:</a><br>
+                     
+											@AuraEnabled annotation enables client- and server-side access to an Apex controller method. This annotation makes your methods available to your Lightning components (both Lightning web components and Aura components) </li>
+											<ul>
+												<li>use http://newsapi.org for free news api and login to get your key for your endpoint request</li>
+												<li>response is used to store the request you send</li>
+												<li>try and catch block to catch any errors with getting response forexample errors with the key ,so you will receive error 404 instead of 200 </li>
+												<li>Deserialize the JSON string into collections of primitive data types and   return newsJsonData</li>
+											</ul>
+								
       
 								 <br>
 								 <script src="https://gist.github.com/ALAIN-CLAUDE/154388c184d4d2283d71e3dcb860f718.js"></script>
@@ -134,32 +146,62 @@
 
                       
                       <p> 
-                     Javascript code LWC
+                     <h3>	<li>Javascript code LWC </li> </h3>
+										<br>
+												<ul>
+													<li>Import  retriveNews from your apex class </li>
+													<li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">connectedCallBack :</a><br>
+													 </li>
+													 <li>In fetchNews , the then() method takes 2 arguments and returns a promise which are callback fxns for success or error</li>
+													 <li>Once we receive our response(array of articles),we want to format our data(date,name and id).So we pass it as a parameter in our formatNewsData and use map fxn to get each array item and index to generate a new id for each item. Apart from id, we need the source name of each article item .Return all our properties and store in result array so we can use to render data in our html. </li>
+													 <li>In our showModal we get each item id and store in id variable.
+														we then check if the id is same as the id of the element selected in our result news items and if same we store in our selectedNews property display in our modal.Now with this selectedNews  we can retrieve and  display the news title,source name , content , author and date.
+														put showModal property to true so each time user clicks on the button it shows and closeModal to false.
+													 </li>
+													 <li>For get modalClass, if modal is open append slds-modal ${this.isModalOpen else "slds-fade-in-open" :""  </li>
+													 <li>get modalBackdropClass will be true only when modal is open to kmake background slightly dark</li>
+
+												</ul>
 										<br>
 										<script src="https://gist.github.com/ALAIN-CLAUDE/5a58797af4b047bed4fc30d7834996ea.js"></script>
                       </p> 
                       <p> 
-                      HTML
+												<h3>	<li> HTML </li> </h3>
+												<br>
+														<ul>
+															
+															<li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">lightning design system :</a><br>
+																Use grid system provides a flexible, mobile-first, device-agnostic layout system. It controls alignment, order, flow, and gutters.
+																Keep cards in center with justify-center
+															 </li>
+															 <li>for:each to iterate over the results and store each item in "item" variable. Fields to display item-url,date of item and title</li>
+															 <li ><a href="https://www.lightningdesignsystem.com/components/modals/#site-main-content" class="color">Modals :</a><br>
+																Use Modals to display news content in a layer above the app
+															 </li>
+															 <li> </li>
+		
+														</ul>
+                     
 									 <br>
 									 <script src="https://gist.github.com/ALAIN-CLAUDE/1882aff8760f3be1ecbc150e4808ff0e.js"></script>
 											</p> 
 										<p>
-											CSS FILE
+										<h3>CSS FILE</h3>	
 											<br>
 											<script src="https://gist.github.com/ALAIN-CLAUDE/2879cebdd77f22e5c6335beda8a0d13e.js"></script>
 										</p>
 
                     <p> 
-                      Lightning App builder record page 
+                     <h3>Lightning App builder record page </h3> 
                       <a href="#" class="image featured"><img src="newsAppIMG/todaysnewsAppbuild.jpg" alt="" > 
                       
                     </p> 
                     <p> 
-                     Display on Record page
+                    <h3>Display on Record page</h3> 
                       <a href="#" class="image featured"><img src="newsAppIMG/todaysnews1.jpg"  alt="" > 
                       </p> 
 
-                   
+										</ol>
 									</section>
 								
 								</article>
@@ -169,7 +211,7 @@
 	
 	<!-- Carousel -->
 	<section class="carousel">
-		<div class="reel">
+		<div class="reel" id="portfolio">
 
 			<article>
 				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
@@ -285,7 +327,7 @@
 								<div class="row">
 									<div class="col-12">
 										<!-- Contact -->
-											<section class="contact" id="conts">
+											<section class="contact" id="contact">
 												<header>
 													<h3>Find me on ...</h3>
 												</header>
