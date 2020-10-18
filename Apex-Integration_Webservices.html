@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Apex Integration</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Apex Integration</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              
+              <li><a href="#portfolio">Portfolio</a></li>
+           
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-4 col-12-mobile" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a href="#">Apex Webservices and Rest APIs</a></h3>
+									</header>
+									<p>
+                   Ev car manufacturer with headquarter Org in USA has 4 supply branches in Canada, germany, China , Belgium. These branches  deliver cars to customers. At the end of each day the results of all new deliveries must be updated in headquarter org. These branches are stored in a custom object called 'Ev Branches' and number of cars delivered are stored in a child object called 'Ev deliveries'.
+									</p>
+									<footer>
+										<a href="https://trailhead.salesforce.com/content/learn/modules/apex_integration_services/apex_integration_rest_callouts" class="button">Learn More</a>
+									</footer>
+								</section>
+								<hr />
+								<section>
+									<header>
+										<h3><a href="#">Sed lorem etiam consequat</a></h3>
+									</header>
+									<p>
+										Tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+									</p>
+									<div class="row gtr-50">
+										<div class="col-4">
+											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Nibh sed cubilia</h4>
+											<p>
+												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											</p>
+										</div>
+										<div class="col-4">
+											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Proin sed adipiscing</h4>
+											<p>
+												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											</p>
+										</div>
+										<div class="col-4">
+											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Lorem feugiat magna</h4>
+											<p>
+												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											</p>
+										</div>
+										<div class="col-4">
+											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Sed tempus fringilla</h4>
+											<p>
+												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											</p>
+										</div>
+										<div class="col-4">
+											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Malesuada fermentum</h4>
+											<p>
+												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											</p>
+										</div>
+									</div>
+									<footer>
+										<a href="#" class="button">Magna Adipiscing</a>
+									</footer>
+								</section>
+							</div>
+							<div class="col-8 col-12-mobile imp-mobile" id="content">
+								<article id="main">
+									<header>
+										<h2><a href="#">News App Project </a></h2>
+                    
+										<p><b>Using Rest Callout and Lwc to get latest news </b>
+											<a class="image featured"><img src="newsAppIMG/todaysnews1.jpg" alt="" > 
+                      
+										</p>
+                  </header>
+									<section>
+                    
+										<ol>
+										<p>
+								 
+									<br>
+								
+										<li >	<h3>Create a Conected App </h3></li>
+											<ul>
+											  <li >Go to Setup,App Manager and New connected App </li>
+                   
+                    
+                    <li >Fill in the required fields(name,contact email). In our case Ev Branches App </li>
+                    
+                    <li>Enable OAuth Settings </li>
+                    <li>Provide a callback Url.Use the url of the headquarter Org as in this example</li>
+                    <li>Select OAuth Scopes.This determines the type of access you want to give to the third party api and to this environment. Click save and continue. Within 2-10 minutes changes will take effect on server</li>
+                    <a href="#" class="image featured"><img src="batch/2-10min.jpg" alt="" /></a>
+                    <li>Our consumer key and consumer secret are automatically generated. We will use these in our Main Org(primary org)</li>
+                    <a href="#" class="image featured"><img src="batch/consumerkey.jpg" alt="" /></a>
+											</ul>
+								
+      
+								 <br>
+								 <script src="https://gist.github.com/ALAIN-CLAUDE/154388c184d4d2283d71e3dcb860f718.js"></script>
+                   </p> 
+
+                      
+                      <p> 
+                     <h3>	<li>Javascript code LWC </li> </h3>
+										<br>
+												<ul>
+													<li>Import  retriveNews from your apex class </li>
+													<li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">connectedCallBack :</a><br>
+													 </li>
+													 <li>In fetchNews , the then() method takes 2 arguments and returns a promise which are callback fxns for success or error</li>
+													 <li>Once we receive our response(array of articles),we want to format our data(date,name and id).So we pass it as a parameter in our formatNewsData and use map fxn to get each array item and index to generate a new id for each item. Apart from id, we need the source name of each article item .Return all our properties and store in result array so we can use to render data in our html. </li>
+													 <li>In our showModal we get each item id and store in id variable.
+														we then check if the id is same as the id of the element selected in our result news items and if same we store in our selectedNews property display in our modal.Now with this selectedNews  we can retrieve and  display the news title,source name , content , author and date.
+														put showModal property to true so each time user clicks on the button it shows and closeModal to false.
+													 </li>
+													 <li>For get modalClass, if modal is open append slds-modal ${this.isModalOpen else "slds-fade-in-open" :""  </li>
+													 <li>get modalBackdropClass will be true only when modal is open to kmake background slightly dark</li>
+
+												</ul>
+										<br>
+										<script src="https://gist.github.com/ALAIN-CLAUDE/5a58797af4b047bed4fc30d7834996ea.js"></script>
+                      </p> 
+                      <p> 
+												<h3>	<li> HTML </li> </h3>
+												<br>
+														<ul>
+															
+															<li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">lightning design system :</a><br>
+																Use grid system provides a flexible, mobile-first, device-agnostic layout system. It controls alignment, order, flow, and gutters.
+																Keep cards in center with justify-center
+															 </li>
+															 <li>for:each to iterate over the results and store each item in "item" variable. Fields to display item-url,date of item and title</li>
+															 <li ><a href="https://www.lightningdesignsystem.com/components/modals/#site-main-content" class="color">Modals :</a><br>
+																Use Modals to display news content in a layer above the app
+															 </li>
+															 <li> </li>
+		
+														</ul>
+                     
+									 <br>
+									 <script src="https://gist.github.com/ALAIN-CLAUDE/1882aff8760f3be1ecbc150e4808ff0e.js"></script>
+											</p> 
+										<p>
+										<h3>CSS FILE</h3>	
+											<br>
+											<script src="https://gist.github.com/ALAIN-CLAUDE/2879cebdd77f22e5c6335beda8a0d13e.js"></script>
+										</p>
+
+                    <p> 
+                     <h3>Lightning App builder record page </h3> 
+                      <a href="#" class="image featured"><img src="newsAppIMG/todaysnewsAppbuild.jpg" alt="" > 
+                      
+                    </p> 
+                    <p> 
+                    <h3>Display on Record page</h3> 
+                      <a href="#" class="image featured"><img src="newsAppIMG/todaysnews1.jpg"  alt="" > 
+                      </p> 
+
+										</ol>
+									</section>
+								
+								</article>
+							</div>
+						</div>
+						<hr />
+	
+	<!-- Carousel -->
+	<section class="carousel">
+		<div class="reel" id="portfolio">
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+		</div>
+	</section>
+
+
+		
+		
+					<!-- Footer -->
+						<div id="footer">
+							<div class="container">
+							
+							
+								<div class="row">
+									<div class="col-12">
+										<!-- Contact -->
+											<section class="contact" id="contact">
+												<header>
+													<h3>Find me on ...</h3>
+												</header>
+											
+												<ul class="icons">
+													<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+												</ul>
+											</section>
+		
+										<!-- Copyright -->
+											<div class="copyright">
+												<ul class="menu">
+													<li>&copy; 2015-2020. All rights reserved.</li><li>Design:Alain-Claude </li>
+												</ul>
+											</div>
+		
+									</div>
+		
+								</div>
+							</div>
+						</div>
+		
+					</div>
+	</div>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
