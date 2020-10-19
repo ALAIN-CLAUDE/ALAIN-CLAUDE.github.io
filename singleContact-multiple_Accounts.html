@@ -17,7 +17,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">News App</a></h1>
+								<h1><a href="index.html" id="logo">AccountContactRelation</a></h1>
 							</header>
 						</div>
 
@@ -46,11 +46,12 @@
 										<h3><a href="#">Many to many Relationship</a></h3>
 									</header>
 									<p>
-                    My company creates an Account in Salesforce for every real world location of a business.Oksana a restaurant owner owns Malina Restaurants in Kiev and Malina Restaurants in Houston but my company want to have only 1 contact per person(e.g Oksana should have only one contact in salesforce but multiple accounts for her restaurant locations) 
+										A many-to-many relationship allows each record of one object to be linked to multiple records from another object and vice versa.
+										When modeling a many-to-many relationship, you use a junction object to connect the two objects you want to relate to each other.
 
 									</p>
 									<footer>
-										<a href="https://trailhead.salesforce.com/content/learn/modules/apex_integration_services/apex_integration_rest_callouts" class="button">Learn More</a>
+										<a href="https://help.salesforce.com/articleView?id=relationships_manytomany.htm&type=5" class="button">Learn More</a>
 									</footer>
 								</section>
 								<hr />
@@ -116,7 +117,7 @@
 							<div class="col-8 col-12-mobile imp-mobile" id="content">
 								<article id="main">
 									<header>
-										<h2><a href="#"> Using Junction Object(AccountContactRelation) to count Contact's related Accounts and update a custom field </a></h2>
+										<h2><a href="#">Project : Updating Parent Object through junction object(programmatic approach)</a></h2>
                     
 										<p><strong>Case : </strong>My company creates an Account in Salesforce for every real world location of a business.Oksana a restaurant owner owns Malina Restaurants in Kiev and Malina Restaurants in Houston but my company want to have only 1 contact per person(e.g Oksana should have only one contact in salesforce but multiple accounts for her restaurant locations) .
                       <br>
@@ -138,47 +139,16 @@
                    </p> 
                  
                  <p> 
-                   <h3>	<li>Add Relationship </li> </h3>
-									<br>
-											Go to page layout and include related list . Then go to related list of each contact to add relationship
-										<br>
-										<script src="https://gist.github.com/ALAIN-CLAUDE/5a58797af4b047bed4fc30d7834996ea.js"></script>
+									 <h3>	<li>APex Trigger </li> </h3>
+									 <ul>
+									 <li>This trigger counts the number of contacts related to each account and updates the field 'Number of accounts ' on contact records accordingbto the defined events.</li>
+									 <li>when contact is related to its second account , it sends an email automatically</li>
+									</ul>
+								<br>
+								<script src="https://gist.github.com/ALAIN-CLAUDE/91a882508e466ad1b1e97be3575cde65.js"></script>
                       </p> 
-                      <p> 
-												<h3>	<li> HTML </li> </h3>
-												<br>
-														<ul>
-															
-															<li ><a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/create_lists" class="color">lightning design system :</a><br>
-																Use grid system provides a flexible, mobile-first, device-agnostic layout system. It controls alignment, order, flow, and gutters.
-																Keep cards in center with justify-center
-															 </li>
-															 <li>for:each to iterate over the results and store each item in "item" variable. Fields to display item-url,date of item and title</li>
-															 <li ><a href="https://www.lightningdesignsystem.com/components/modals/#site-main-content" class="color">Modals :</a><br>
-																Use Modals to display news content in a layer above the app
-															 </li>
-															 <li> </li>
-		
-														</ul>
                      
-									 <br>
-									 <script src="https://gist.github.com/ALAIN-CLAUDE/1882aff8760f3be1ecbc150e4808ff0e.js"></script>
-											</p> 
-										<p>
-										<h3>CSS FILE</h3>	
-											<br>
-											<script src="https://gist.github.com/ALAIN-CLAUDE/2879cebdd77f22e5c6335beda8a0d13e.js"></script>
-										</p>
 
-                    <p> 
-                     <h3>Lightning App builder record page </h3> 
-                      <a href="#" class="image featured"><img src="newsAppIMG/todaysnewsAppbuild.jpg" alt="" > 
-                      
-                    </p> 
-                    <p> 
-                    <h3>Display on Record page</h3> 
-                      <a href="#" class="image featured"><img src="newsAppIMG/todaysnews1.jpg"  alt="" > 
-                      </p> 
 
 										</ol>
 									</section>
