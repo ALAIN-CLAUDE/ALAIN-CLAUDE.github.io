@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/modal.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="left-sidebar is-preload">
@@ -147,12 +148,13 @@
                          
                        </ul></li>
                       </ol>
-                      
+											<h3>Result : Click Image To View</h3>
                      
-                   
-                       
-                     
-											<a class="image featured"><img src="batch/restimg.jpeg" alt="" > 
+											<img class="myImg" src="accAddressImg/finished.jpg" alt=""  width="600" height="333">
+											<br>
+											<img class="myImg" src="accAddressImg/laravil-gif.gif" alt=""  width="600" height="333">
+											<br>
+											<img class="myImg" src="accAddressImg/laravil-delete-gif.gif" alt=""  width="600" height="333">
                       
 										</p>
                   </header>
@@ -164,54 +166,89 @@
 										<li >	<h3>Create a Custom object named Account Address with required fields </h3></li>
 											<ul>
                         <li >Go to Setup,Object Manager and create custom object with required fields and data types or use the schema builder </li>
-                        <li >Create a master detail relationship between this object(account Adddress object) and Account </li>
-                        <br>
-                        <a href="#" class="image featured"><img src="accAddressImg/fields.jpg" alt="" /></a>
+												<li >Create a master detail relationship between this object(account Adddress object) and Account.Then proceed to create all require fields </li>
+												<li>Main flag field should be a formula field . It will be used to display our flag icon in the datatable</li>
+												<br>
+												
+												<img class="myImg" src="accAddressImg/fields.jpg" alt="Custom fields"  width="800" height="333">
+
+												<!-- The Modal -->
+												<div id="myModal" class="modal">
+													<span class="close">&times;</span>
+													<img class="modal-content" id="img01">
+													<div id="caption"></div>
+												</div>
                       </ul>
                      </p> 
 
                       
                       <p> 
                      <h3>	
-                       <li> Create a Lightning Web Component  </li>   
+                       <li> Write Apex Classes for Account and Account Address objects to meet our requirements  </li>   
                     </h3>
 										<br>
 												<ul>
-													<li>We need an apex class to query for our required fields data to put on the lightning web component </li>
-													
+													<li>We need an apex class accountHandler for account 	
+													</li>
+													<br>
+													<script src="https://gist.github.com/ALAIN-CLAUDE/cfbfaa3e9d6016550648e6181ed18a68.js"></script>
+													<br>
+													<li>We need another apex class myAccountAddressHandler for Account Address cusom object</li>
+													<br>
+													<script src="https://gist.github.com/ALAIN-CLAUDE/259a6df5d46a27ed1a6fed22c92ee19f.js"></script>
 
 												</ul>
-										<br>
-                    <script src="https://gist.github.com/ALAIN-CLAUDE/50f44f4b99bb340f61baa76d91f01403.js"></script>
+									
                       </p> 
                       <p> 
-												<h3>	<li> Create Rest Api Callout in USA Headquarter Org </li> </h3>
+												<h3>	<li> Write Apex trigger for various trigger events </li> </h3>
 												
 														<ul>
-                              <li>Now in USA org go to Setup , remote site settings and include the url of Ev Branches Org</li>
-                              <a href="#" class="image featured"><img src="batch/remotesite.jpg" alt="" /></a>
-															<li >getEvdeliveries method in the code below was used for authentication .we get access token, deserialize it , check if it isn't null and use it in our header when using the GET method.
-                               </li>
-                               <a href="#" class="image featured"><img src="batch/access token2.jpg" alt="" /></a>
-															 
+                              <li> Apex trigger for myAccountHandler Class</li>
+															 <br>
+															 <script src="https://gist.github.com/ALAIN-CLAUDE/ce0d64d030eea0e6711e9e3258eaeed7.js"></script>
+															 <li>Apex trigger for myAccountAddressHandler Class</li>
+															 <br>
+															 <script src="https://gist.github.com/ALAIN-CLAUDE/eaaff73ad055163b5c103dab90756acf.js"></script>
+
 														</ul>
-                     
-									 <br>
-                   <script src="https://gist.github.com/ALAIN-CLAUDE/1411727909971c8313a29fe8486e5258.js"></script>
-                      </p> 
-                      
-										<p>
-										
-                    <li><h3>Get Results In Headquarter Org</h3>	</li>
-                    <a href="#" class="image featured"><img src="batch/new delivery.jpg" alt="" > 
-                      
-										</p>
+                      </p>
+						
+											<p> 
+												<h3>	<li> Create Ligthning Web Component to Display Account Address records related to each account with main flag </li> </h3>
+												
+														<ul>
+															<li>First create an apex class . This class contains 2 methods to get all fields for our lwc datatable and modal pop-up and a second method to delete list of  records </li>
+															 <script src="https://gist.github.com/ALAIN-CLAUDE/00639ee6fcc95dbd8832d76bc6c0041d.js"></script>
+															 <br>
+															 <li>Create LWC HTML 
+																 <p>this will contain our datatable and modal for our action buttons</p>
+															 </li>
+															 <script src="https://gist.github.com/ALAIN-CLAUDE/99351cfa5a4ac0e076471827e29d1afb.js"></script>
+															 <br>
+															 <li>Create LWC js 
+																 <p>Main flag is a formula field which is used to flag the address type if it is main or not</p>
+															 </li>
+															 <script src="https://gist.github.com/ALAIN-CLAUDE/99722645578d21b012378c19679ffc50.js"></script>
+															 <br>
+														</ul>
+                      </p>
+						
 
                     <p> 
-                     <h3>Results In Main Org</h3> 
-                     
-                      <a href="#" class="image featured"><img src="batch/results.jpg" alt="" > 
-                      
+                     <h3>Results:</h3> 
+                   	<ul>
+											 <li>Live Demonstration below. Click image to view </li>
+										 </ul>
+											<img class="myImg"  src="accAddressImg/laravil-gif.gif" alt="Custom fields"  width="600" height="333">
+										
+										
+										
+										<br>
+											
+										<img class="myImg" src="accAddressImg/laravil-delete-gif.gif" alt=""  width="600" height="333"></li>
+									
+										 
                     </p> 
                   
 
@@ -378,6 +415,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/modal.js"></script>
 
 	</body>
 </html>
