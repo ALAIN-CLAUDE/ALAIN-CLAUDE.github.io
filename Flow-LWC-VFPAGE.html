@@ -123,123 +123,85 @@
 									<header>
 										<h2><a href="#"> Project : Lightning Flows and LWC</a></h2>
                     
-										<p>CASE : As a fast paced sales company where every minute counts,my team is stressed that they forget fields they need to fill out when booking an opportunity to closed/Won and they find valdation rules too complicated. So our manager requires both a  declarative and programmatic solution to choose from.
+										<p>CASE : As a fast paced sales company where every minute counts,my team is stressed that they forget fields they need to fill out when booking an opportunity to closed/Won and they find valdation rules too complicated. So our manager requires both a   programmatic and declarative solutions to choose one suitable for the team.Also an automated email should be sent to the opportunity owner's manager letting them know that the opportunity was booked
                       <br>
-                      <ol>
-                        <li>Build out a screen flow that captures the data required when an opportunity is moved to closed won.</li>
-                       <li>Once flow is complete, an automated email should be sent to the opportunity owner's manager letting them know that the opportunity was booked and Display the following data as required for moving to closed won: <ul>
-                         <li> Monthly shipment</li>
-                         <li>primary contact</li>
-                         <li>expected award date</li>
-                         <li>Short description</li>
-                         <li>Expiration date</li>
-                        
-                        
-                       </ul></li>
-                       <li>Automatically launcha LWC and request the field above (2) and make sure all are required. Basically same criteria as above<ul>
-                        
-                         
-                       </ul></li>
-                      </ol>
-											<h3>Result : Click Image To View</h3>
                      
-											<img class="myImg" src="accAddressImg/finished.jpg" alt=""  width="600" height="333">
-											<br>
-											<img class="myImg" src="accAddressImg/laravil-gif.gif" alt=""  width="600" height="333">
-											<br>
-											<img class="myImg" src="accAddressImg/laravil-delete-gif.gif" alt=""  width="600" height="333">
+							
                       
 										</p>
                   </header>
 									<section>
                     
-										<ol>
-										<p>
-								
-										<li >	<h3>Create a Custom object named Account Address with required fields </h3></li>
-											<ul>
-                        <li >Go to Setup,Object Manager and create custom object with required fields and data types or use the schema builder </li>
-												<li >Create a master detail relationship between this object(account Adddress object) and Account.Then proceed to create all require fields </li>
-												<li>Main flag field should be a formula field . It will be used to display our flag icon in the datatable</li>
-												<br>
-												
-												<img class="myImg" src="accAddressImg/fields.jpg" alt="Custom fields"  width="800" height="333">
+                    <ol>
+                      <li>Programmatic Approach : Automatically launch a LWC and request the data required fields when an opportunity is moved to closed won.Display the following fields
+                        <br> (a)Monthly shipment
+                        <br>
+                        (b)primary contact<br>(c)expected award date<br>(d)Short description<br>(e)Expiration date<ul>
+                          <br>
+                       <div >
+                         <h3>RESULT :click image to view</h3>
+                         <br>
+                        <img class="myImg" src="accAddressImg/LWC-ACTION.gif" alt=""  width="600" height="333"></div>
+                        <br>
+                        <h3>Steps:</h3>
+                        <li>Create LWC called ClosedWonOpps.Use lightning record edit form in the html and our input fields to collect input data.handleLoad and submit buttons will be handled in the js file.
+                           </li>
+                        <br>
+                        <script src="https://gist.github.com/ALAIN-CLAUDE/aee1b967289cda9dfcaab91b6673ae2e.js"></script>
+                        <br>
+                        <li>In Js we will import fields using lightning data service .This Fetch records once, reducing network transfers, app server load, and database server load.
+                        It Cache record data on the client, separate from component metadata.Fields array is stores all the fetched fields.
+                        handleLoad is use to set the spinner to false once reord loads </li>
+                        <br>
+                        <script src="https://gist.github.com/ALAIN-CLAUDE/4a355dcf61464f2fb563b437354ef9d5.js"></script>
+                        <br>
+                        <li>Create and aura component AuraClosedWon.Inorder to use our LWC as QUICK ACTION button we need to pass in our LWC as child with its record id in the lightning component(aura) so that it can be seen to create the quick action button.Also for closeQuickAction so that when we click save button ,toast message should show and action automatically closed with page refreshed</li>
+                        <br>
+                        <script src="https://gist.github.com/ALAIN-CLAUDE/e8b6ad075a5cd555c2667ac0095838a9.js"></script>
+                        <br>
+                        <script src="https://gist.github.com/ALAIN-CLAUDE/b6637dcb317dfaa5e6864002a852acb4.js"></script>
+                        <br>
+                       <li>Deploy and go to opportunity under object manager.Create New action called Closed/Won Required and choose lightning component . Adjust the size to 650px or as suitable</li>
+                     <br>
+                     <img class="myImg" src="accAddressImg/opplayout.png" alt=""  width="600" height="333">
+                     <br>
+                       <li>Go to page layout,Mobile and lightning actions and add it</li>
+                    
 
-                      </ul>
-                     </p> 
-
-                      
-                      <p> 
-                     <h3>	
-                       <li> Write Apex Classes for Account and Account Address objects to meet our requirements  </li>   
-                    </h3>
-										<br>
-												<ul>
-													<li>We need an apex class accountHandler for account 	
-													</li>
-													<br>
-													<script src="https://gist.github.com/ALAIN-CLAUDE/cfbfaa3e9d6016550648e6181ed18a68.js"></script>
-													<br>
-													<li>We need another apex class myAccountAddressHandler for Account Address cusom object</li>
-													<br>
-													<script src="https://gist.github.com/ALAIN-CLAUDE/259a6df5d46a27ed1a6fed22c92ee19f.js"></script>
-
-												</ul>
-									
-                      </p> 
-                      <p> 
-												<h3>	<li> Write Apex trigger for various trigger events </li> </h3>
-												
-														<ul>
-                              <li> Apex trigger for myAccountHandler Class</li>
-															 <br>
-															 <script src="https://gist.github.com/ALAIN-CLAUDE/ce0d64d030eea0e6711e9e3258eaeed7.js"></script>
-															 <li>Apex trigger for myAccountAddressHandler Class</li>
-															 <br>
-															 <script src="https://gist.github.com/ALAIN-CLAUDE/eaaff73ad055163b5c103dab90756acf.js"></script>
-
-														</ul>
-                      </p>
-						
-											<p> 
-												<h3>	<li> Create Ligthning Web Component to Display Account Address records related to each account with main flag </li> </h3>
-												
-														<ul>
-															<li>First create an apex class . This class contains 2 methods to get all fields for our lwc datatable and modal pop-up and a second method to delete list of  records </li>
-															 <script src="https://gist.github.com/ALAIN-CLAUDE/00639ee6fcc95dbd8832d76bc6c0041d.js"></script>
-															 <br>
-															 <li>Create LWC HTML 
-																 <p>this will contain our datatable and modal for our action buttons</p>
-															 </li>
-															 <script src="https://gist.github.com/ALAIN-CLAUDE/99351cfa5a4ac0e076471827e29d1afb.js"></script>
-															 <br>
-															 <li>Create LWC js 
-																 <p>Main flag is a formula field which is used to flag the address type if it is main or not</p>
-															 </li>
-															 <script src="https://gist.github.com/ALAIN-CLAUDE/99722645578d21b012378c19679ffc50.js"></script>
-															 <br>
-														</ul>
-                      </p>
-						
-
-                    <p> 
-                     <h3>Results:</h3> 
-                   	<ul>
-											 <li>Live Demonstration below. Click image to view </li>
-										 </ul>
-											<img class="myImg"  src="accAddressImg/laravil-gif.gif" alt="Custom fields"  width="600" height="333">
-										
-										
-										
-										<br>
-											
-										<img class="myImg" src="accAddressImg/laravil-delete-gif.gif" alt=""  width="600" height="333"></li>
-									
-										 
-                    </p> 
-                  
-
-										</ol>
+                         
+                       </ul></li>
+                      <li>Declarative Approach :Building out a screen flow that captures the data required when an opportunity is moved to closed won. Same fields as above.
+                        <br>
+                        <h3>Result : Click Image To View</h3>
+                        <img class="myImg" src="accAddressImg/flowFields.gif" alt=""  width="600" height="333">
+                        <br>
+                        <ul>
+                          <li>First get the opportuniy record and the fields needed for the flow and store in the variable</li>
+                          <br>
+                          <img class="myImg" src="accAddressImg/GetOpps.gif" alt=""  width="600" height="333">
+                          <br>
+                          <li>Use a screen to display fields and collect information from the user</li>
+                          <br>
+                          <img class="myImg" src="accAddressImg/DisplayScreen.gif" alt=""  width="600" height="333">
+                          <br>                            
+                          <li>Update the opportunity</li>
+                          <br>
+                          <img class="myImg" src="accAddressImg/updateOpp.gif" alt=""  width="600" height="333">  
+                          <br>
+                          <li>A last screen to display success message</li>
+                          <br>
+                          <img class="myImg" src="accAddressImg/Screenfin.gif" alt=""  width="600" height="333">  
+                          <br>
+                        </ul>
+                      </li>
+                     <li>Sending an automated email to the opportunity owner's manager letting them know that the opportunity was booked . <ul>
+                      <li>Go to setup and create a new Workflow with a criteria when Opportunity stage is Closed/Won to opportunity owner's manager</li>
+                      <br>
+                      <img class="myImg" src="accAddressImg/workflow.png" alt=""  width="600" height="200">  
+                      <br>
+                     </ul></li>
+                    
+                    </ol>
 									</section>
 								
 								</article>
