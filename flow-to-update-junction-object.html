@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Process Automation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/modal.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Lightning Flow and LWC</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              
+              <li><a href="#portfolio">Portfolio</a></li>
+           
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-4 col-12-mobile" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a href="#">Lightning Flow 
+                    </a></h3>
+									</header>
+									<p>
+                    A flow is the part of Lightning Flow that collects data and performs actions in your Salesforce org or an external system. Types of Lightning Flow are: 
+                    <ul>
+                    <li>screen flows</li>
+                    <li>autolaunched flows</li>
+                    <li>Scheduled Triggered Flow</li>
+                    <li>Record Triggered Flow</li>    
+                    <li>Platform Triggered Event flow</li></ul>
+									</p>
+									<footer>
+                    <a href="https://help.salesforce.com/articleView?id=flow.htm&type=5" class="button">Learn More</a>
+									
+									</footer>
+								</section>
+								<hr />
+								<section>
+									<header>
+										<h3><a href="#">More LWC BELOW....</a></h3>
+									</header>
+									<div class="row gtr-50">
+										<div class="col-4">
+											<a href="News-App.html" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>News-App LWC</h4>
+											<p>
+												Using Rest Callout and Lwc to get latest news.
+											</p>
+										</div>
+										<div class="col-4">
+											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Proin sed adipiscing</h4>
+											<p>
+												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											</p>
+										</div>
+										<div class="col-4">
+											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Lorem feugiat magna</h4>
+											<p>
+												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											</p>
+										</div>
+										<div class="col-4">
+											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Sed tempus fringilla</h4>
+											<p>
+												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											</p>
+										</div>
+										<div class="col-4">
+											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Malesuada fermentum</h4>
+											<p>
+												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											</p>
+										</div>
+									</div>
+									<footer>
+										<a href="#" class="button">Magna Adipiscing</a>
+									</footer>
+								</section>
+							</div>
+							<div class="col-8 col-12-mobile imp-mobile" id="content">
+								<article id="main">
+									<header>
+										<h2><a href="#"> Flow to transfer opportunity contact roles from the Opportunity's account related contacts when opportunity is created</a></h2>
+                    
+										<p>
+                      <br>
+                     
+                      <h3>Result :</h3>
+                      <br>
+                      <img class="myImg" src="accAddressImg/ContRoles.gif" alt=""  width="800" height="">
+                      <br>
+                      
+										</p>
+                  </header>
+									<section>
+                    
+                    <ol>
+                      <li>Go to setup,flow,Record triggered flow.  
+                      <li>Choose opportunity as starting object and Condition Requirements to none</li>
+                        <br>
+                     <img class="myImg" src="accAddressImg/trig.png" alt=""  width="800" height="">
+                     <br>
+                        <li>get contact with AccountId related to Opportunity AccountId.Select all records and automatically store all fields or choose specific fields </li>
+                        <br>
+                        <img class="myImg" src="accAddressImg/getCon.png" alt=""  width="800" height="">
+                     <li>Loop over those contact records . </li>
+                     <br>
+                     <img class="myImg" src="accAddressImg/conLoop.png" alt=""  width="600" height="333">
+                     <br>
+                     <li>Create a record variable and Assign these Looped. </li>
+                     <br>
+                     <img class="myImg" src="accAddressImg/assignCon.png" alt=""  width="600" height="333">
+                     <br>
+                     <li>Create another record variable and finally Add all records from step 5 . </li>
+                     <br>
+                     <img class="myImg" src="accAddressImg/conAss2.png" alt=""  width="600" height="333">
+                     <br>
+                     <li>Create contact roles for the newly created Opportunity with contacts from opportunity's account . </li>
+                     <br>
+                     <img class="myImg" src="accAddressImg/createControles.png" alt=""  width="800" height="333">
+                     <br>
+
+                     <li>Activate and Test </li>
+                     <br>
+                     <img class="myImg" src="accAddressImg/account.png" alt=""  width="800" height="">
+                     <br>
+                     <br>
+                     <img class="myImg" src="accAddressImg/creaOpp.png" alt=""  width="800" height="">
+                     <br>
+                     <img class="myImg" src="accAddressImg/createdOpp.png" alt=""  width="800" height="333">
+                       </li>
+                      
+                    
+                    </ol>
+									</section>
+								
+								</article>
+							</div>
+						</div>
+						<hr />
+	
+	<!-- Carousel -->
+	<section class="carousel">
+		<div class="reel" id="portfolio">
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="MultipleContactCreation.html" class="image featured"><img src="multImages/empty3.jpg" alt="" /></a>
+				<header>
+					<h3>Quick Multiple Record Creation(LWC)</h3>
+				</header>
+				<footer>
+					<a href="MultipleContactCreation.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+		</div>
+	</section>
+
+
+		
+		
+					<!-- Footer -->
+						<div id="footer">
+							<div class="container">
+							
+							
+								<div class="row">
+									<div class="col-12">
+										<!-- Contact -->
+											<section class="contact" id="contact">
+												<header>
+													<h3>Find me on ...</h3>
+												</header>
+											
+												<ul class="icons">
+													<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+												</ul>
+											</section>
+		
+										<!-- Copyright -->
+											<div class="copyright">
+												<ul class="menu">
+													<li>&copy; 2015-2020. All rights reserved.</li><li>Design:Alain-Claude </li>
+												</ul>
+											</div>
+		
+									</div>
+		
+								</div>
+							</div>
+						</div>
+		
+					</div>
+	</div>
+		</div>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+	</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/modal.js"></script>
+
+	</body>
+</html>
