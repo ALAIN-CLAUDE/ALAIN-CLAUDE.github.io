@@ -68,53 +68,71 @@
 									</header>
 									<div class="row gtr-50">
 										<div class="col-4">
-											<a href="News-App.html" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
+											<a href="flow-to-update-junction-object.html" class="image fit"><img src="images/processAuto.png" alt="" />
+											</a>
+											
 										</div>
 										<div class="col-8">
-											<h4>News-App LWC</h4>
+											<a href="flow-to-update-junction-object.html" >			<h4>Manipulating Junction Objects</h4>
 											<p>
-												Using Rest Callout and Lwc to get latest news.
+											This flow transfers opportunity contact roles from the Opportunity's account related contacts when opportunity is created(Parent related records transfered)
+												<br> <button>Check it out</button>
 											</p>
+										</a>
 										</div>
 										<div class="col-4">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
+											<a href="flow-to-Using-radiobuttons.html" class="image fit"><img src="images/processAuto.png" alt="" /></a>
 										</div>
 										<div class="col-8">
-											<h4>Proin sed adipiscing</h4>
+											<a href="flow-to-Using-radiobuttons.html" >			<h4>Easy Create</h4>
 											<p>
-												Amet nullam fringilla nibh nulla convallis tique ante proin.
+												This screen flow provide a quick way to create records and relate to Parent records without neccessarily creating from record page. <br> <button>Check it out</button>
 											</p>
+										</a>
 										</div>
 										<div class="col-4">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
+											<a href="flow-and-process.html" class="image fit"><img src="images/processAuto.png" alt="" /></a>
 										</div>
 										<div class="col-8">
-											<h4>Lorem feugiat magna</h4>
+											<a href="flow-and-process.html" >		<h4> Updating child field from parent</h4>
 											<p>
-												Amet nullam fringilla nibh nulla convallis tique ante proin.
+												Autolaunch flow to	Update Opportunity primary contact field anytime account primary contact is updated.<br> <button>Check it out</button>
 											</p>
+										</a>
 										</div>
 										<div class="col-4">
-											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
+											<a href="Flow-before-delete.html" class="image fit"><img src="images/processAuto.png" alt="" /></a>
 										</div>
 										<div class="col-8">
-											<h4>Sed tempus fringilla</h4>
+											<a href="Flow-before-delete.html"> <h4>Before Delete flow</h4>  
 											<p>
-												Amet nullam fringilla nibh nulla convallis tique ante proin.
+											<br> <button>Check it out</button>
 											</p>
+										</a>
 										</div>
 										<div class="col-4">
-											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
+											<a href="------" class="image fit"><img src="images/processAuto.png" alt="" /></a>
+										</div>
+								
+										<div class="col-8">
+											<a href="-------">			<h4>-----</h4>
+											<p>
+										------.<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="------" class="image fit"><img src="images/processAuto.png" alt="" /></a>
 										</div>
 										<div class="col-8">
-											<h4>Malesuada fermentum</h4>
+											<h4>------</h4>
 											<p>
-												Amet nullam fringilla nibh nulla convallis tique ante proin.
+										---- .<br> <button>Check it out</button>
 											</p>
 										</div>
 									</div>
 									<footer>
-										<a href="#" class="button">Magna Adipiscing</a>
+								
 									</footer>
 								</section>
 							</div>
@@ -133,6 +151,35 @@
 									<section>
                     
                     <ol>
+											<li>Declarative Approach :Building out a screen flow that captures the data required when an opportunity is moved to closed won. Same fields as above.
+                        <br>
+                        <h3>Result : Click Image To View</h3>
+                        <img class="myImg" src="accAddressImg/flowFields.gif" alt=""  width="600" height="">
+                        <br>
+                        <ul>
+                          <li>First get the opportuniy record and the fields needed for the flow and store in the variable</li>
+                          <br>
+                          <img class="myImg" src="accAddressImg/GetOpps.gif" alt=""  width="600" height="">
+                          <br>
+                          <li>Use a screen to display fields and collect information from the user</li>
+                          <br>
+                          <img class="myImg" src="accAddressImg/DisplayScreen.gif" alt=""  width="600" height="">
+                          <br>                            
+                          <li>Update the opportunity</li>
+                          <br>
+                          <img class="myImg" src="accAddressImg/updateOpp.gif" alt=""  width="600" height="">  
+													<br>
+													<li>Send automated email to the opportunity owner's manager letting them know that the opportunity was booked . Here use action </li>
+                          <br>
+                          <img class="myImg" src="accAddressImg/Emailaction flow.png" alt=""  width="600" height="">  
+													<br>
+                          <li>A last screen to display success message</li>
+                          <br>
+                          <img class="myImg" src="accAddressImg/Screenfin.gif" alt=""  width="600" height="">  
+                          <br>
+                        </ul>
+                      </li>
+                   
                       <li>Programmatic Approach : Automatically launch a LWC and request the data required fields when an opportunity is moved to closed won.Display the following fields
                         <br> (a)Monthly shipment
                         <br>
@@ -141,7 +188,7 @@
                        <div >
                          <h3>RESULT :click image to view</h3>
                          <br>
-                        <img class="myImg" src="accAddressImg/LWC-ACTION.gif" alt=""  width="600" height="333"></div>
+                        <img class="myImg" src="accAddressImg/LWC-ACTION.gif" alt=""  width="600" height=""></div>
                         <br>
                         <h3>Steps:</h3>
                         <li>Create LWC called ClosedWonOpps.Use lightning record edit form in the html and our input fields to collect input data.handleLoad and submit buttons will be handled in the js file.
@@ -163,43 +210,14 @@
                         <br>
                        <li>Deploy and go to opportunity under object manager.Create New action called Closed/Won Required and choose lightning component . Adjust the size to 650px or as suitable</li>
                      <br>
-                     <img class="myImg" src="accAddressImg/opplayout.png" alt=""  width="600" height="333">
+                     <img class="myImg" src="accAddressImg/opplayout.png" alt=""  width="600" height="">
                      <br>
                        <li>Go to page layout,Mobile and lightning actions and add it</li>
                     
 
                          
                        </ul></li>
-                      <li>Declarative Approach :Building out a screen flow that captures the data required when an opportunity is moved to closed won. Same fields as above.
-                        <br>
-                        <h3>Result : Click Image To View</h3>
-                        <img class="myImg" src="accAddressImg/flowFields.gif" alt=""  width="600" height="333">
-                        <br>
-                        <ul>
-                          <li>First get the opportuniy record and the fields needed for the flow and store in the variable</li>
-                          <br>
-                          <img class="myImg" src="accAddressImg/GetOpps.gif" alt=""  width="600" height="333">
-                          <br>
-                          <li>Use a screen to display fields and collect information from the user</li>
-                          <br>
-                          <img class="myImg" src="accAddressImg/DisplayScreen.gif" alt=""  width="600" height="333">
-                          <br>                            
-                          <li>Update the opportunity</li>
-                          <br>
-                          <img class="myImg" src="accAddressImg/updateOpp.gif" alt=""  width="600" height="333">  
-                          <br>
-                          <li>A last screen to display success message</li>
-                          <br>
-                          <img class="myImg" src="accAddressImg/Screenfin.gif" alt=""  width="600" height="333">  
-                          <br>
-                        </ul>
-                      </li>
-                     <li>Sending an automated email to the opportunity owner's manager letting them know that the opportunity was booked . <ul>
-                      <li>Go to setup and create a new Workflow with a criteria when Opportunity stage is Closed/Won to opportunity owner's manager</li>
-                      <br>
-                      <img class="myImg" src="accAddressImg/workflow.png" alt=""  width="600" height="200">  
-                      <br>
-                     </ul></li>
+                   
                     
                     </ol>
 									</section>
