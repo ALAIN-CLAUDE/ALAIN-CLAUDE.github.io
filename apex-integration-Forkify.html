@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>News App Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/modal.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo"> Integrate Salesforce with Forkify using Lightning Web Components </a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              
+              <li><a href="#portfolio">Portfolio</a></li>
+           
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-4 col-12-mobile" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a href="#">Rest Callout</a></h3>
+									</header>
+									<p>
+                    REST callouts are based on HTTP.  Each callout request is associated with an HTTP method and an endpoint. The HTTP method indicates what type of action is desired.
+									</p>
+									<footer>
+										<a href="https://trailhead.salesforce.com/content/learn/modules/apex_integration_services/apex_integration_rest_callouts" class="button">Learn More</a>
+									</footer>
+								</section>
+								<hr />
+                <section>
+									<header>
+										<h3><a href="#">More LWC BELOW....</a></h3>
+									</header>
+									<div class="row gtr-50">
+                    <div class="col-4">
+											<a href="News-App.html" class="image fit"><img src="images/Apex Integration Services LOGO.gif" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<a href="News-App.html" >		<h4>	Integrating Salesforce with NewsApi</h4>
+											<p>
+										<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="Apex-Integration_Webservices.html" class="image fit"><img src="images/Apex Integration Services LOGO.gif" alt="" />
+											</a>
+											
+										</div>
+										<div class="col-8">
+											<a href="Apex-Integration_Webservices.html" >			<h4>Integrating 2 salesforce Orgs</h4>
+											<p>
+											
+												<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+								
+										<div class="col-4">
+											<a href="MultipleContactCreation.html" class="image fit"><img src="images/lwc-logo.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<a href="MultipleContactCreation.html" >		<h4> Create multiple records</h4>
+											<p>
+											This custom component provides the ability to create multiple records at same time.<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="Flow-LWC-VFPAGE.html" class="image fit"><img src="images/lwc-logo.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<a href="Flow-LWC-VFPAGE.html"> <h4>Field Validation</h4>  
+											<p>
+												This custom component will display required fields when opportunity stage is changed without the use of validation rules.<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="lwc-download-csv.html" class="image fit"><img src="images/lwc-logo.png" alt="" /></a>
+										</div>
+								
+										<div class="col-8">
+											<a href="lwc-download-csv.html">			<h4>CSV File Download</h4>
+											<p>
+											This component provides let you download a csv file from displayed records on your datatable.<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+						
+									</div>
+								
+								</section>
+							</div>
+							<div class="col-8 col-12-mobile imp-mobile" id="content">
+								<article id="main">
+									<header>
+										<h2><a href="#">Using Rest Callout and Lwc to get, search and display Recipes from Forkify </a></h2>
+                    
+										<p>
+											<h3>Result : </h3>
+                       
+                        
+                        <img class="myImg" src="accAddressImg/resulRecipes.png" alt=""  width="600" height="">
+                        <br>
+                        <img class="myImg" src="accAddressImg/recipeDisplay.gif" alt=""  width="600" height="">
+										</p>
+                  </header>
+									<section>
+                    
+										<ol>
+										<p>
+									
+								
+								
+										<li>Create an apex class:<br>
+                     
+											@AuraEnabled annotation enables client- and server-side access to an Apex controller method. This annotation makes your methods available to your Lightning components (both Lightning web components and Aura components) </li>
+											<ul>
+                        <li>use https://forkify-api.herokuapp.com/v2 for free recipe api and key for your endpoint request</li>
+                        <li>Go to setup and add the link above to remote site sttings </li>
+												<li>response is used to store the request you send</li>
+												<li>try and catch block to catch any errors with getting response forexample errors with the key ,so you will receive error 404 instead of 200 </li>
+												<li>Deserialize the JSON string into collections of primitive data types and   return newsJsonData</li>
+											</ul>
+								
+      
+								 <br>
+                 <script src="https://gist.github.com/ALAIN-CLAUDE/827f0ba09d6abd5c158456a7b3c17d71.js"></script>
+                   </p> 
+
+                      
+                      <p> 
+                     <h3>	<li>Parent LWC : ApexIntegration</li> </h3>
+										<br>
+												<ul>
+                          <li>Two components need to be created. the parent component(ApexIntegration) to handle recipe search and a child component(ApexIntegrationChild) to display the list of recipes if availabel.</li>
+													<li>Import searchRecipes from your apex class </li>
+													<li >connectedCallBack Called when the element is inserted into a document,Establish communication with the current document or container and coordinate behavior with the environment.
+													 </li>
+													 <li>In  getData , the then() method takes 2 arguments and returns a promise which are callback fxns for success or error</li>
+                           <li>Once we receive our response(array of recipes),we want to format our data(id,title and publisher).Return all our properties and store in recipeDetails array so we can use to render data in our html. </li>
+                           <br>
+                           <script src="https://gist.github.com/ALAIN-CLAUDE/04e5b3a1e9e186018eeffecc6cb74ee6.js"></script>
+                           <br>
+                        <li>Html <br>
+                          <script src="https://gist.github.com/ALAIN-CLAUDE/d31e21741a6ded2aef65362785af9864.js"></script>
+                        </li>
+                        <li>Css <br>
+                          <script src="https://gist.github.com/ALAIN-CLAUDE/813eb60838ab198b7c764c89c3cff040.js"></script>
+                        </li>
+
+												</ul>
+									
+                      </p> 
+                      <p> 
+												<h3>	<li> Child Lwc: ApexIntegrationChild  </li> </h3>
+												<br>
+														<ul>
+															
+															<li > Js File: 
+                              get the array (recipeDetails) with formatted data from parent component and pass it to Html.
+                              <br>
+                              <script src="https://gist.github.com/ALAIN-CLAUDE/90b1082f5a58b1a869e55e7704a0b3eb.js"></script>
+															 </li>
+                               <li>Html : <br>
+                                for:each to iterate over the results and store each item in "item" variable. Fields to display item.Image_url,item.publisher and title
+                              <br>
+                              <script src="https://gist.github.com/ALAIN-CLAUDE/7e0892a2e20b0c5527c8b1b5556376a0.js"></script>
+                              </li>
+															 <li >Css : <br>
+                                <script src="https://gist.github.com/ALAIN-CLAUDE/6f6b487e7d9569e8dfdf42332256410f.js"></script>
+															 </li>
+															 
+		
+														</ul>
+                     
+									 <br>
+									 <script src="https://gist.github.com/ALAIN-CLAUDE/1882aff8760f3be1ecbc150e4808ff0e.js"></script>
+											</p> 
+										<p>
+										<h3>CSS FILE</h3>	
+											<br>
+											<script src="https://gist.github.com/ALAIN-CLAUDE/2879cebdd77f22e5c6335beda8a0d13e.js"></script>
+										</p>
+
+                  
+										</ol>
+									</section>
+								
+								</article>
+							</div>
+						</div>
+						<hr />
+	
+	<!-- Carousel -->
+	<section class="carousel">
+		<div class="reel" id="portfolio">
+
+			<article>
+				<a href="lwc-accountAddress.html" class="image featured"><img src="images/LWC LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Lightning Web Component (lwc)</h3>
+				</header>
+				<footer>
+					<a href="lwc-accountAddress.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="Flow-LWC-VFPAGE.html" class="image featured"><img src="images/Process Automation LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Process Automation(Flow,process etc)</h3>
+				</header>
+				<footer>
+					<a href="Flow-LWC-VFPAGE.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="singleContact-multiple_Accounts.html" class="image featured"><img src="images/Apex Triggers LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Apex Triggers</h3>
+				</header>
+				<footer>
+					<a href="singleContact-multiple_Accounts.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="apex-integration-Forkify.html" class="image featured"><img src="images/Apex Integration Services LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Apex Integration Services</h3>
+				</header>
+				<footer>
+					<a href="apex-integration-Forkify.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="singleContact-multiple_Accounts.html" class="image featured"><img src="images/Objects and Relationships LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Objects and Relationships</h3>
+				</header>
+				<footer>
+					<a href="singleContact-multiple_Accounts.html" class="button">Check it out</a>
+				</footer>
+			</article>
+		</div>
+	</section>
+
+
+		
+		
+					<!-- Footer -->
+						<div id="footer">
+							<div class="container">
+							
+							
+								<div class="row">
+									<div class="col-12">
+										<!-- Contact -->
+											<section class="contact" id="contact">
+												<header>
+													<h3>Find me on ...</h3>
+												</header>
+											
+												<ul class="icons">
+													<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+												</ul>
+											</section>
+		
+										<!-- Copyright -->
+											<div class="copyright">
+												<ul class="menu">
+													<li>&copy; 2015-2020. All rights reserved.</li><li>Design:Alain-Claude </li>
+												</ul>
+											</div>
+		
+									</div>
+		
+								</div>
+							</div>
+						</div>
+		
+					</div>
+	</div>
+    </div>
+    <!-- The Modal -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+	</div>
+
+		<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/modal.js"></script>
+
+	</body>
+</html>
