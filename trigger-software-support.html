@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>News App Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/modal.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo"> Apex Trigger </a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              
+              <li><a href="#portfolio">Portfolio</a></li>
+           
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-4 col-12-mobile" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a href="#">Apex Trigger</a></h3>
+									</header>
+									<p>
+                    Apex triggers enable you to perform custom actions before or after events to records in Salesforce, such as insertions, updates, or deletions. Triggers can be defined for top-level standard objects, such as Account or Contact, custom objects, and some standard child objects.
+									</p>
+									<footer>
+									  <a href="https://trailhead.salesforce.com/en/content/learn/modules/apex_triggers/apex_triggers_intro#:~:text=Apex%20triggers%20enable%20you%20to,insertions%2C%20updates%2C%20or%20deletions.&text=Triggers%20can%20be%20defined%20for,active%20by%20default%20when%20created." class="button">Learn More</a>
+									</footer>
+								</section>
+								<hr />
+								<section>
+									<header>
+										<h3><a href="#">More BELOW....</a></h3>
+									</header>
+									<div class="row gtr-50">
+										<div class="col-4">
+											<a href="singleContact-multiple_Accounts.html" class="image fit"><img src="images/Objects and Relationships LOGO.gif" alt="" />
+											</a>
+											
+										</div>
+										<div class="col-8">
+											<a href="singleContact-multiple_Accounts.html" >			<h4>Updating Parent Object through junction object(programmatic approach)</h4>
+											<p>
+											
+												<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="lwc-accountAddress.html" class="image fit"><img src="images/Objects and Relationships LOGO.gif" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<a href="lwc-accountAddress.html" >			<h4>Multiple Account Addresses Trigger</h4>
+											<p>
+											<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="trigger-automatically-create-Order-and-orderItems-when-opp-is-created.html" class="image fit"><img src="images/Objects and Relationships LOGO.gif" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<a href="trigger-automatically-create-Order-and-orderItems-when-opp-is-created.html" >		<h4>Trigger to Automate OpportunityLineItems and OrderLineItems</h4>
+											<p>
+										<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="trigger-software-support.html" class="image fit"><img src="images/Objects and Relationships LOGO.gif" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<a href="trigger-software-support.html"> <h4>Trigger and validation rule to lock records entry process</h4>  
+											<p>
+											<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="trigger-UpdateQuoteRelatedOpportunity.html" class="image fit"><img src="images/Objects and Relationships LOGO.gif" alt="" /></a>
+										</div>
+								
+										<div class="col-8">
+											<a href="trigger-UpdateQuoteRelatedOpportunity.html">			<h4>Trigger to Update parent record on field change in child</h4>
+											<p>
+									<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="trigger-UpdateQuoteRelatedOpportunity.html" class="image fit"><img src="images/Objects and Relationships LOGO.gif" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Update </h4>
+											<p>
+									Simple Order to Opportunity update trigger .<br> <button>Check it out</button>
+											</p>
+										</div>
+									</div>
+									<footer>
+								
+									</footer>
+								</section>
+							</div>
+							<div class="col-8 col-12-mobile imp-mobile" id="content">
+								<article id="main">
+									<header>
+										<h2><a href="#"> </a></h2>
+                    <p>This application is basically designed to setup the Order entry process, sales adjustment, assignment of Order entry user, simplified approval process, Payout case process and automate the Order process, referral payout process.
+                    </p>
+										<p>
+										
+										</p>
+                  </header>
+									<section>
+                    <h3>Requirement</h3>
+										<ol>
+										<p>
+									
+								
+								
+										<li>Added triggers so as not to allow users to set the Opportunity stage to Closed Won, Closed Lost IF an Order has been created for the opportunity and Order status is equal to draft.
+                      <br>
+                      <h2>Solution:</h2><br>
+                      <ul>
+                        <li>first fetch opportunity id from order with status as draft and store these ids in a set </li>
+                        <li>Loop over opportunities inserted or updated(trigger.new) and check if the id is found in the set of opportunities from order with draft status.If true and stage is closed won or lost add error
+                          <br>
+                      <h4>result:</h4>
+                          <br>
+                          <img class="myImg" src="accAddressImg/opptriggOrder.gif" alt=""  width="800" height="">
+                          <br>
+                          <script src="https://gist.github.com/ALAIN-CLAUDE/7303c90af26699618e1cc077cc3d49f5.js"></script>
+                        </li>
+                      </ul>
+                      
+                     
+                    <li>Added Another triggers to show error and not to allow users to set the Opportunity stage to Closed Won when opportunity line items field Invoice Date is left blank
+                      <br>
+                      <h2>Solution:</h2>
+                        <br>
+                        <script src="https://gist.github.com/ALAIN-CLAUDE/45d9228cf9755a6f4d09dd5e2f06d7e8.js"></script>
+                      </li>
+                    <li>Lock opportunity once its closed through validation rules
+                      <br>
+                      <h2>Solution:</h2><br>
+                      <ul>
+                        <li>go to setup,object manager and search opportunty,validation rules</li>
+                        <li>Use OR and ISCHANGED to check since its required that if a field is changed or a stage is edited after opprotunity is set to close an error should display. 
+                          <br>
+                          <img class="myImg" src="accAddressImg/Opp-validion.png" alt=""  width="800" height="">
+                        </li>
+                        <li>result on closed opportunity record
+                          <br>
+                          <img class="myImg" src="accAddressImg/oppValid.gif" alt=""  width="800" height="">
+                        </li>
+                      </ul>
+                    </li>
+                    <li> Lock Order status based on profile:
+                      Created validation rule to lock Order status based on profile.
+                      <br>
+                      <h2>Solution:</h2><br>
+                    
+                    </li>
+                    <li> Added feature so as to restrict Notes and Accounts deletion and modification by other than the Admin and owner of Opportunity.</li>
+              
+                   </p> 
+
+                      
+                      <p> 
+                  	<li> One to One relationship from opportunity to case:
+                      Added trigger so as to restrict user for to add more case to an Opportunity and show user a custom error message.</li> 
+										<br>
+											
+                   <br>
+                      
+                    <li>Build Simplified Approval Processes:
+                      Added feature so a as to send email to Managers based on Approval process when opportunity stage is proposal/priceQuote without locking the record.<br>
+                        
+                  </li>
+                 
+
+												</ul>
+									
+                      </p> 
+                      <p> 
+								   <li> Child Lwc: ApexIntegrationChild  </li> 
+									
+												
+											</p> 
+										<p>
+								
+										</p>
+
+                  
+										</ol>
+									</section>
+								
+								</article>
+							</div>
+						</div>
+						<hr />
+	
+	<!-- Carousel -->
+	<section class="carousel">
+		<div class="reel" id="portfolio">
+
+			<article>
+				<a href="lwc-accountAddress.html" class="image featured"><img src="images/LWC LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Lightning Web Component (lwc)</h3>
+				</header>
+				<footer>
+					<a href="lwc-accountAddress.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="Flow-LWC-VFPAGE.html" class="image featured"><img src="images/Process Automation LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Process Automation(Flow,process etc)</h3>
+				</header>
+				<footer>
+					<a href="Flow-LWC-VFPAGE.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="singleContact-multiple_Accounts.html" class="image featured"><img src="images/Apex Triggers LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Apex Triggers</h3>
+				</header>
+				<footer>
+					<a href="singleContact-multiple_Accounts.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="apex-integration-Forkify.html" class="image featured"><img src="images/Apex Integration Services LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Apex Integration Services</h3>
+				</header>
+				<footer>
+					<a href="apex-integration-Forkify.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="singleContact-multiple_Accounts.html" class="image featured"><img src="images/Objects and Relationships LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Objects and Relationships</h3>
+				</header>
+				<footer>
+					<a href="singleContact-multiple_Accounts.html" class="button">Check it out</a>
+				</footer>
+			</article>
+		</div>
+	</section>
+
+
+		
+		
+					<!-- Footer -->
+						<div id="footer">
+							<div class="container">
+							
+							
+								<div class="row">
+									<div class="col-12">
+										<!-- Contact -->
+											<section class="contact" id="contact">
+												<header>
+													<h3>Find me on ...</h3>
+												</header>
+											
+												<ul class="icons">
+													<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+												</ul>
+											</section>
+		
+										<!-- Copyright -->
+											<div class="copyright">
+												<ul class="menu">
+													<li>&copy; 2015-2020. All rights reserved.</li><li>Design:Alain-Claude </li>
+												</ul>
+											</div>
+		
+									</div>
+		
+								</div>
+							</div>
+						</div>
+		
+					</div>
+	</div>
+    </div>
+    <!-- The Modal -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+	</div>
+
+		<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/modal.js"></script>
+
+	</body>
+</html>
