@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Process Automation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/modal.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Lightning Flow and LWC</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              
+              <li><a href="#portfolio">Portfolio</a></li>
+           
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-4 col-12-mobile" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a href="#">Lightning Flow 
+                    </a></h3>
+									</header>
+									<p>
+                    A flow is the part of Lightning Flow that collects data and performs actions in your Salesforce org or an external system. Types of Lightning Flow are: 
+                    <ul>
+                    <li>screen flows</li>
+                    <li>autolaunched flows</li>
+                    <li>Scheduled Triggered Flow</li>
+                    <li>Record Triggered Flow</li>    
+                    <li>Platform Triggered Event flow</li></ul>
+									</p>
+									<footer>
+                    <a href="https://help.salesforce.com/articleView?id=flow.htm&type=5" class="button">Learn More</a>
+									
+									</footer>
+								</section>
+								<hr />
+								<section>
+									<header>
+										<h3><a href="#">More BELOW....</a></h3>
+									</header>
+									<div class="row gtr-50">
+                    <div class="col-4">
+											<a href="Flow-LWC-VFPAGE.html" class="image fit"><img src="images/processAuto.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>ClosedWon Required Fields</h4>
+											<p>
+										this flow displays all required fields when opportunity is set to closedWon.<br> <button>Check it out</button>
+											</p>
+										</div>
+										<div class="col-4">
+											<a href="flow-to-update-junction-object.html" class="image fit"><img src="images/processAuto.png" alt="" />
+											</a>
+											
+										</div>
+										<div class="col-8">
+											<a href="flow-to-update-junction-object.html" >			<h4>Manipulating Junction Objects</h4>
+											<p>
+											This flow transfers opportunity contact roles from the Opportunity's account related contacts when opportunity is created(Parent related records transfered)
+												<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="flow-to-Using-radiobuttons.html" class="image fit"><img src="images/processAuto.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<a href="flow-to-Using-radiobuttons.html" >			<h4>Easy Create</h4>
+											<p>
+												This screen flow provide a quick way to create records and relate to Parent records without neccessarily creating from record page. <br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="flow-and-process.html" class="image fit"><img src="images/processAuto.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<a href="flow-and-process.html" >		<h4> Updating child field from parent</h4>
+											<p>
+												Autolaunch flow to	Update Opportunity primary contact field anytime account primary contact is updated.<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="Flow-before-delete.html" class="image fit"><img src="images/processAuto.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<a href="Flow-before-delete.html"> <h4>Before Delete flow</h4>  
+											<p>
+											<br> <button>Check it out</button>
+											</p>
+										</a>
+										</div>
+										<div class="col-4">
+											<a href="flow-scheduling.html" class="image fit"><img src="images/processAuto.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Scheduled flows</h4>
+											<p>
+										This flow is schedule to perform a batch on lead records .<br> 
+										<a href="flow-scheduling.html" ><button>Check it out</button></a>
+											</p>
+										</div>
+									
+									</div>
+									<footer>
+								
+									</footer>
+								</section>
+							</div>
+							<div class="col-8 col-12-mobile imp-mobile" id="content">
+								<article id="main">
+									<header>
+										<h2><a href="#"> Project : Cpq and Invocable apex</a></h2>
+                    
+										<p>CASE : This method can be used to perform calculations on Order object or quote based on certain fields when order is created or updated using Invocable Apex and Process to meet the  requirements below..
+                      <ol>
+                        <li>There are 11 amount fields
+                          <ul>
+                            <li>Y1, Y2, Y3, Y4 , Y5</li>
+                            <li>Y1 Fees, Y2 Fees, Y3 Fees, Y4 Fees , Y5 Fees</li>
+                            <li>Total Fees </li>
+                          </ul>
+                        </li>
+                        
+                        <li>
+                          There are 5 boolean fields
+                          <ul>
+                            <li>Has value y1, Has value y2, Has value y3.......</li>
+                          </ul>
+                        </li>
+                        <li>2 picklist fields with value(Yes and No)
+                          <ul>
+                            <li>Multiyear-year Fee Increase</li>
+                            <li>Multiyear-year Uniform Increase</li>
+                          </ul>
+                        </li>
+                        <li>And percentage Field (Multiyear-Year fee Increase Percent)</li>
+                      </ol>
+                    
+                     
+                      Requirement:
+                      These checkboxes are true if the Amount fields Y1 to Y5 above have values.<br>
+                      <ol>
+                        <li> Write a class with an invocable method </li>
+                        <li>Always populate Y1 fees with value y1</li>
+                        <li >If Multiyear-year Fee Increase = yes and Multiyear-year Uniform Increase = yes and Multiyear-Year fee Increase Percent > 0 , check 
+                          <ul>
+                            <li>if checkbox field  Has value y2 is true, populate Y2 Fees  field with ( percentage field * y1 + y1) </li>
+                            <li> if checkbox Has value y3 is true, populate Y3 Fees field with ( percentage field * y2 + y2)</li>
+                            <li> if checkbox Has value y4 is true, populate Y4 Fees field with ( percentage field * y3 + y3)</li>
+                          </ul>
+                        </li>
+                        <li>populate Total Fees with sum of Y1 fees field to Y5 fees if available</li>
+                       
+
+                      </ol>			
+                      
+										</p>
+                  </header>
+									<section>
+                    <br>
+                    <h3>Result : Click Image To View</h3>
+                    <img class="myImg" src="accAddressImg/resultProcessed.gif" alt=""  width="800" height="">
+                    <br>
+                    <img class="myImg" src="accAddressImg/total.png" alt=""  width="800" height="">
+
+                    <ol>
+											<li>
+                        Create Apex Class with invocable apex method OrderUpdate.
+                        Assign @InvocableMethod to make it invocable.Create a new Order list for updating.
+                        
+                      </li>
+                      <li>Query for all required fields from Order whose id is in the ids list , loop over the list, calculate percent, implement field criteria with if statement and update the order passed .
+                        <br>
+                        <script src="https://gist.github.com/ALAIN-CLAUDE/2f097ff7d2a5cec803cf67720c4a9e47.js"></script>
+                        <br>
+                      </li>
+                      <li>Go to setup and Create a new process using Process builder.this will enable passing Object Id and updating the boolean fields Has Value y1 to Has value y5.
+                        <br>
+                        <img class="myImg" src="accAddressImg/process Fileds.gif" alt=""  width="100%" height="">
+                        <br>
+                        <ul>
+                          <li>Choose order as object to start the process and no criteria.For action choose Apex class and find the invocable class created. For Set Apex Variables,choose ids from the list of id of the invocable method and reference it to the order id.
+                            <br>
+                            <img class="myImg" src="accAddressImg/invocableorder.png" alt=""  width="800" height="">
+                          
+                          </li>
+                          <li>check if Amount fields Y1 to Y2 is not null,if true update checkbox field has value Y1 to has value Y5
+                            <br>
+                            <img class="myImg" src="accAddressImg/y1criteria.png" alt=""  width="800" height="">
+                          </li>
+                          <li>Immediate action to check Has value Y1 to Y5 to true
+                            <br>
+                            <img class="myImg" src="accAddressImg/Y1 amount fields.png" alt=""  width="800" height="">
+                          
+
+                          <li>Activate</li>
+                        </ul>
+                      </li>
+                      
+                      
+                    
+                    </ol>
+									</section>
+								
+								</article>
+							</div>
+						</div>
+						<hr />
+	
+	<!-- Carousel -->
+	<section class="carousel">
+		<div class="reel" id="portfolio">
+
+			<article>
+				<a href="lwc-accountAddress.html" class="image featured"><img src="images/LWC LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Lightning Web Component (lwc)</h3>
+				</header>
+				<footer>
+					<a href="lwc-accountAddress.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="Flow-LWC-VFPAGE.html" class="image featured"><img src="images/Process Automation LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Process Automation(Flow,process etc)</h3>
+				</header>
+				<footer>
+					<a href="Flow-LWC-VFPAGE.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="singleContact-multiple_Accounts.html" class="image featured"><img src="images/Apex Triggers LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Apex Triggers</h3>
+				</header>
+				<footer>
+					<a href="singleContact-multiple_Accounts.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="apex-integration-Forkify.html" class="image featured"><img src="images/Apex Integration Services LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Apex Integration Services</h3>
+				</header>
+				<footer>
+					<a href="apex-integration-Forkify.html" class="button">Check it out</a>
+				</footer>
+			</article>
+
+			<article>
+				<a href="singleContact-multiple_Accounts.html" class="image featured"><img src="images/Objects and Relationships LOGO.gif" alt="" /></a>
+				<header>
+					<h3>Project : Objects and Relationships</h3>
+				</header>
+				<footer>
+					<a href="singleContact-multiple_Accounts.html" class="button">Check it out</a>
+				</footer>
+			</article>
+		</div>
+	</section>
+		
+		
+					<!-- Footer -->
+						<div id="footer">
+							<div class="container">
+							
+							
+								<div class="row">
+									<div class="col-12">
+										<!-- Contact -->
+											<section class="contact" id="contact">
+												<header>
+													<h3>Find me on ...</h3>
+												</header>
+											
+												<ul class="icons">
+													<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+												</ul>
+											</section>
+		
+										<!-- Copyright -->
+											<div class="copyright">
+												<ul class="menu">
+													<li>&copy; 2015-2020. All rights reserved.</li><li>Design:Alain-Claude </li>
+												</ul>
+											</div>
+		
+									</div>
+		
+								</div>
+							</div>
+						</div>
+		
+					</div>
+	</div>
+		</div>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+	</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/modal.js"></script>
+
+	</body>
+</html>
